@@ -127,13 +127,13 @@ blockquote span{
 	color: #fff;
 }
 
-@media(max-width: 992px){
+@media(max-width: 991px){
 	.default-section{
 		padding: 75px 0;
 	}
 }
 
-@media(max-width: 576px){
+@media(max-width: 575px){
 
 	.default-section{
 		padding: 55px 0;
@@ -160,7 +160,7 @@ blockquote span{
 	z-index: 99;
 }
 
-@media(max-width: 768px){
+@media(max-width: 767px){
 
 	.header{
 	padding: 15px 0;
@@ -172,6 +172,7 @@ blockquote span{
 	}
 }
 
+/* header start */
 
 header::after{
 	content: "";
@@ -208,6 +209,42 @@ nav a:hover{
 	border-top: none;	
 }
 
+
+@media(max-width: 767px){
+	
+	.navbar{
+		position: static;
+	}
+
+	.navbar-collapse{
+		position: absolute;
+		top: 60px;
+		right: 0;
+		left: 0;
+		padding: 30px;
+		background-color: rgba(0, 0, 0, .75);
+
+	}
+
+	nav{
+		font-size: 40px;
+		line-height: 1.5;
+	}
+
+	nav a + a{
+		margin-left: 0;
+	}
+
+	nav a{
+		display: block;
+		text-align: center;
+	}
+}
+/* header end */
+
+
+/* inner start */
+
 .inner{
 	height: 100vh;
 	background-image: url('../img/bg-image.png');/*поменяй на картинку*/
@@ -236,7 +273,7 @@ nav a:hover{
 	margin-bottom: 100px;
 }
 
-@media(max-width: 919px){
+@media(max-width: 992px){
 
 .inner-content h1{
 	letter-spacing: 1em;
@@ -244,39 +281,30 @@ nav a:hover{
 	}
 }
 
-@media(max-width: 768px){
+@media(max-width: 767px){
 
 .inner-content h1{
-	letter-spacing: 1em;
-	text-indent: 1em;
+	letter-spacing: .7em;
+	text-indent: .7em;
 	}
 }
 
-@media(max-width: 771px){
+@media(max-width: 575px){
 
-	.inner-content h1{
-		letter-spacing: 1em;
-		text-indent: 1em;
+.inner-content h1{
+	text-indent: 0;
+	margin-left: 20px;
 	}
+
+.inner-content .description{
+  margin: 0 10px;
+  text-align: center;
+  font-size: 14px;
 }
 
-@media (max-width: 624px) {
-
-	.inner-content h1{
-		letter-spacing: .7em;
-		text-indent: .7em;
-		margin-bottom: 35px;
-	}
 }
 
-@media (max-width: 576px) {
-
-	.inner-content h1{
-		letter-spacing: .7em;
-		text-indent: .7em;
-		margin-bottom: 35px;
-	}
-}
+/* inner end */
 
 .about-studio-text{
 	margin-bottom: 105px;
@@ -284,6 +312,10 @@ nav a:hover{
 
 .team-card-img{
 	position: relative;
+}
+
+.our-team .team-card-img img{
+	width: 100%;
 }
 
 .team-card-img:hover .team-card-skills{
@@ -354,25 +386,14 @@ nav a:hover{
 	font-size: 12px;
 }
 
-@media(max-width: 768px){
-
-.our-team .team-card-img img{
-	width: 100%;
-}
-
-body > main > section.about-studio.default-section > div > div.our-team > div > div:nth-child(1) > div > div.team-card-info.uppercase.text-center > p.team-card-role{
-	margin-bottom: 10px;
-}
-
-body > main > section.about-studio.default-section > div > div.our-team > div > div:nth-child(2) > div > div.team-card-info.uppercase.text-center > p.team-card-role{
-	margin-bottom: 10px;
-}
-
-body > main > section.about-studio.default-section > div > div.about-studio-text > div > div:nth-child(2) > p{
+@media(max-width: 991px){
+	
+.our-team .team-card-role{
 	margin-bottom: 10px;
 }
 
 }
+
 
 
 /* services start */
@@ -441,14 +462,14 @@ section.services{
 }
 
 
-@media(max-width: 992px){
+@media(max-width: 991px){
 
 	.imac img{
-		transform: translate(0, -120px);
+		transform: translate(0, -90px);
 	}
 }
 
-@media(max-width: 768px){
+@media(max-width: 767px){
 
 	.imac img{
 		display: none;
@@ -709,6 +730,11 @@ section.what-say{
 
 
 /* Latest-news style */
+
+.Latest-News .hover-img{
+	width: 100%;
+}
+
 .Latest-News h2{
 	color: #111;
 	display: inline-block;
@@ -970,32 +996,38 @@ width: 50%;
  	background-color: #111111;
 }
 
-@media(max-width: 992px){
+@media(max-width: 1199px){
 	.contact-section .contact-info-item-text span{
 		font-size: 11px;
 	}
 }
 
-@media(max-width: 576px){
+@media(max-width: 991px){
+	.contact-section .contact-info-item-text span{
+		font-size: 11px;
+	}
+}
+
+@media(max-width: 575px){
 
 	.contact-section .contact-info-item-text span{
 		font-size: 8px;
 		font-weight: 400;
 	}
 
-	.contact-section-form > *{
-		float: left;
-		width: 100%;
-		padding: 0;
-		}
+.contact-section-form > *{
+	float: left;
+	width: 100%;
+	padding: 0;
+	}
 
-		.form-right textarea{
-			margin-top: 10px;
-		}
+	.form-right textarea{
+		margin-top: 10px;
+	}
 
-		.contact-section-form{
-			margin-top: 35px;
-		}
+	.contact-section-form{
+		margin-top: 35px;
+	}
 }
 
 /* contact section end */
